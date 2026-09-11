@@ -1,0 +1,37 @@
+{
+  "preset": {"id": "editorial_card"},
+  "asset_roles": {
+    "synthetic-video.avi": "background_video",
+    "reference-card.png": "card_content"
+  },
+  "layout": {
+    "card_position": "center",
+    "card_width": 1040,
+    "card_height": 600,
+    "corner_radius": 34
+  },
+  "colors": {
+    "card": "#F8F5EF",
+    "text": "#111827",
+    "highlight": "#1769FF"
+  },
+  "motion": {
+    "entry_direction": "bottom",
+    "exit_direction": "right",
+    "overshoot": false
+  },
+  "background_blur": true,
+  "blur_amount": 26,
+  "highlight_count": 2,
+  "text": {
+    "title": "Referencia editorial"
+  },
+  "typography": {
+    "requires_identification": false,
+    "size": 66,
+    "leading": 76,
+    "tracking": -12,
+    "alignment": "left",
+    "fallback": "ArialMT"
+  }
+}

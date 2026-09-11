@@ -1,0 +1,201 @@
+{
+  "preset": {"id": "custom"},
+  "inferred_direction": "independent metric, icon and caption motion",
+  "asset_roles": {
+    "icon-reference.png": "icon"
+  },
+  "assets": [
+    {
+      "id": "info_icon",
+      "role": "icon",
+      "source": "icon-reference.png",
+      "preserve_or_reconstruct": "preserve",
+      "required": true,
+      "media_type": "image",
+      "expected": {"has_video": true, "has_audio": false, "width": 64, "height": 64}
+    }
+  ],
+  "elements": [
+    {
+      "id": "bg",
+      "label": "BG",
+      "type": "solid",
+      "geometry": {"position": [960, 540], "size": [1920, 1080]},
+      "appearance": {"color": "#08111F", "opacity": 100},
+      "layer_order": 1
+    },
+    {
+      "id": "data_panel",
+      "label": "DATA_PANEL",
+      "type": "panel",
+      "geometry": {"position": [960, 540], "size": [980, 420], "roundness": 32},
+      "appearance": {"color": "#1E3A8A", "opacity": 96},
+      "layer_order": 2
+    },
+    {
+      "id": "info_icon",
+      "label": "ICON",
+      "type": "icon",
+      "asset_id": "info_icon",
+      "geometry": {"position": [650, 500], "size": [128, 128]},
+      "appearance": {"opacity": 100, "fit": "contain"},
+      "layer_order": 3
+    },
+    {
+      "id": "metric",
+      "label": "METRIC",
+      "type": "text",
+      "text_mode": "point",
+      "geometry": {"position": [900, 500], "size": [360, 120]},
+      "appearance": {"color": "#F8FAFC", "opacity": 100, "text": "72%"},
+      "layer_order": 4
+    },
+    {
+      "id": "caption",
+      "label": "CAPTION",
+      "type": "text",
+      "text_mode": "paragraph",
+      "text_box": {"width": 520, "height": 100},
+      "geometry": {"position": [1040, 610], "size": [520, 100]},
+      "appearance": {"color": "#BFDBFE", "opacity": 100, "text": "Avance del objetivo mensual"},
+      "layer_order": 5
+    }
+  ],
+  "typography": [
+    {
+      "element": "metric",
+      "font": null,
+      "confidence": "unresolved",
+      "fallback": "ArialMT",
+      "size": 92,
+      "leading": 98,
+      "tracking": -20,
+      "alignment": "left",
+      "provider": "fallback"
+    },
+    {
+      "element": "caption",
+      "font": null,
+      "confidence": "unresolved",
+      "fallback": "ArialMT",
+      "size": 34,
+      "leading": 42,
+      "tracking": 0,
+      "alignment": "left",
+      "provider": "fallback"
+    }
+  ],
+  "animation": [
+    {
+      "element": "data_panel",
+      "property": "scale",
+      "start_frame": 0,
+      "end_frame": 14,
+      "start_value": [86, 86],
+      "end_value": [100, 100],
+      "interpolation": "bezier",
+      "easing": {"type": "ease_out", "influence": 72, "overshoot": false},
+      "motion_blur": true
+    },
+    {
+      "element": "info_icon",
+      "property": "rotation",
+      "start_frame": 4,
+      "end_frame": 20,
+      "start_value": -30,
+      "end_value": 0,
+      "interpolation": "bezier",
+      "easing": {"type": "ease_out", "influence": 64, "overshoot": true, "overshoot_amount": 0.1},
+      "motion_blur": true
+    },
+    {
+      "element": "metric",
+      "property": "position",
+      "start_frame": 8,
+      "end_frame": 24,
+      "start_value": [900, 580],
+      "end_value": [900, 500],
+      "interpolation": "bezier",
+      "easing": {"type": "ease_out", "influence": 70, "overshoot": false},
+      "motion_blur": true
+    },
+    {
+      "element": "caption",
+      "property": "opacity",
+      "start_frame": 14,
+      "end_frame": 30,
+      "start_value": 0,
+      "end_value": 100,
+      "interpolation": "bezier",
+      "easing": {"type": "ease_in_out", "influence": 60, "overshoot": false},
+      "motion_blur": false
+    },
+    {
+      "element": "data_panel",
+      "property": "opacity",
+      "start_frame": 132,
+      "end_frame": 149,
+      "start_value": 96,
+      "end_value": 0,
+      "interpolation": "bezier",
+      "easing": {"type": "ease_in", "influence": 68, "overshoot": false},
+      "motion_blur": false
+    },
+    {
+      "element": "info_icon",
+      "property": "opacity",
+      "start_frame": 132,
+      "end_frame": 149,
+      "start_value": 100,
+      "end_value": 0,
+      "interpolation": "bezier",
+      "easing": {"type": "ease_in", "influence": 68, "overshoot": false},
+      "motion_blur": false
+    },
+    {
+      "element": "metric",
+      "property": "opacity",
+      "start_frame": 136,
+      "end_frame": 149,
+      "start_value": 100,
+      "end_value": 0,
+      "interpolation": "bezier",
+      "easing": {"type": "ease_in", "influence": 68, "overshoot": false},
+      "motion_blur": false
+    },
+    {
+      "element": "caption",
+      "property": "opacity",
+      "start_frame": 140,
+      "end_frame": 149,
+      "start_value": 100,
+      "end_value": 0,
+      "interpolation": "bezier",
+      "easing": {"type": "ease_in", "influence": 68, "overshoot": false},
+      "motion_blur": false
+    }
+  ],
+  "essential_graphics": [
+    {
+      "id": "metric_text",
+      "label": "Cifra",
+      "property": "source_text",
+      "targets": ["metric"],
+      "purpose": "Cifra principal editable"
+    },
+    {
+      "id": "caption_text",
+      "label": "Texto secundario",
+      "property": "source_text",
+      "targets": ["caption"],
+      "purpose": "Descripción editable"
+    },
+    {
+      "id": "panel_color",
+      "label": "Color del panel",
+      "property": "fill_color",
+      "targets": ["data_panel"],
+      "purpose": "Color editable del panel"
+    }
+  ]
+}

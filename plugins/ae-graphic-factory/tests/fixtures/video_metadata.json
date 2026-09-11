@@ -1,0 +1,12 @@
+{
+  "filename": "synthetic-reference.mp4",
+  "duration_seconds": 4,
+  "fps": 24,
+  "frame_count": 96,
+  "events": [
+    {"name": "entry_start", "frame": 0},
+    {"name": "entry_end", "frame": 16},
+    {"name": "exit_start", "frame": 76},
+    {"name": "exit_end", "frame": 95}
+  ]
+}

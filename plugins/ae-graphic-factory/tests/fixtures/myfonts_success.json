@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "selected_font": "Source Serif 4 Semibold",
+  "confidence": 0.91,
+  "candidates": [
+    {"font_name": "Source Serif 4 Semibold", "score": 0.91},
+    {"font_name": "Merriweather Bold", "score": 0.74}
+  ]
+}

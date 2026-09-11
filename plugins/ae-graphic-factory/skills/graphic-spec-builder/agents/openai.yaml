@@ -1,0 +1,11 @@
+interface:
+  display_name: "Graphic Spec Builder"
+  short_description: "Convierte briefs visuales en GRAPHIC_SPEC"
+  default_prompt: "Usa $graphic-spec-builder para convertir esta idea, referencias y duración en GRAPHIC_SPEC."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "myfonts"
+      description: "MyFonts/WhatTheFont para identificar tipografía desde referencias cuando sea material."
+policy:
+  allow_implicit_invocation: true

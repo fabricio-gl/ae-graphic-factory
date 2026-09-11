@@ -1,0 +1,13 @@
+{
+  "policies": {
+    "STRICT_EMPTY": {"requires_empty_project": true, "replace_range": false},
+    "REUSE": {"reuse_existing_items": true, "replace_range": false},
+    "REPLACE_RANGE": {"requires_track_and_interval": true, "replace_range": true}
+  },
+  "timeline": {
+    "video_tracks": 3,
+    "target_track_index": 1,
+    "start_seconds": 10,
+    "end_seconds": 16
+  }
+}

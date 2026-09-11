@@ -1,0 +1,187 @@
+{
+  "preset": {
+    "id": "custom"
+  },
+  "exports": {
+    "mogrt": true
+  },
+  "assets": [
+    {
+      "id": "background",
+      "role": "background_image",
+      "source": "background.png",
+      "media_type": "image",
+      "required": true,
+      "expected": {
+        "width": 1920,
+        "height": 1080,
+        "has_video": true,
+        "has_audio": false
+      }
+    },
+    {
+      "id": "portrait",
+      "role": "video",
+      "source": "portrait.avi",
+      "media_type": "video",
+      "required": true,
+      "expected": {
+        "width": 108,
+        "height": 192,
+        "duration_seconds": 5,
+        "has_video": true,
+        "has_audio": true
+      }
+    }
+  ],
+  "elements": [
+    {
+      "id": "background",
+      "label": "BG",
+      "type": "image",
+      "asset_id": "background",
+      "geometry": {
+        "position": [
+          960,
+          540
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "appearance": {
+        "opacity": 100,
+        "fit": "cover"
+      },
+      "layer_order": 1
+    },
+    {
+      "id": "blur",
+      "label": "BLUR",
+      "type": "adjustment",
+      "geometry": {
+        "position": [
+          960,
+          540
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "appearance": {
+        "opacity": 100,
+        "blurriness": 80
+      },
+      "layer_order": 2
+    },
+    {
+      "id": "portrait",
+      "label": "VIDEO",
+      "type": "video",
+      "asset_id": "portrait",
+      "geometry": {
+        "position": [
+          960,
+          540
+        ],
+        "size": [
+          486,
+          864
+        ]
+      },
+      "appearance": {
+        "opacity": 100,
+        "fit": "contain",
+        "audio_gain_percent": 100
+      },
+      "layer_order": 3
+    }
+  ],
+  "animation": [
+    {
+      "element": "portrait",
+      "property": "position",
+      "start_frame": 0,
+      "end_frame": 20,
+      "start_value": [
+        960,
+        1500
+      ],
+      "end_value": [
+        960,
+        540
+      ],
+      "interpolation": "bezier",
+      "easing": {
+        "type": "ease_out",
+        "influence": 70,
+        "overshoot": false
+      },
+      "motion_blur": true
+    },
+    {
+      "element": "portrait",
+      "property": "position",
+      "start_frame": 130,
+      "end_frame": 149,
+      "start_value": [
+        960,
+        540
+      ],
+      "end_value": [
+        2000,
+        540
+      ],
+      "interpolation": "bezier",
+      "easing": {
+        "type": "ease_in",
+        "influence": 70,
+        "overshoot": false
+      },
+      "motion_blur": true
+    },
+    {
+      "element": "portrait",
+      "property": "opacity",
+      "start_frame": 135,
+      "end_frame": 149,
+      "start_value": 100,
+      "end_value": 0,
+      "interpolation": "bezier",
+      "easing": {
+        "type": "ease_in",
+        "influence": 60,
+        "overshoot": false
+      },
+      "motion_blur": false
+    },
+    {
+      "element": "portrait",
+      "property": "audio_gain_percent",
+      "start_frame": 135,
+      "end_frame": 150,
+      "start_value": 100,
+      "end_value": 0,
+      "interpolation": "linear",
+      "easing": {
+        "type": "linear",
+        "influence": 16.667,
+        "overshoot": false
+      },
+      "motion_blur": false
+    }
+  ],
+  "essential_graphics": [
+    {
+      "id": "blur_amount",
+      "label": "Desenfoque",
+      "property": "blur",
+      "targets": [
+        "blur"
+      ],
+      "purpose": "Cantidad de Gaussian Blur del fondo, inicialmente 80"
+    }
+  ]
+}

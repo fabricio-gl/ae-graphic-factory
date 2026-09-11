@@ -1,0 +1,6 @@
+interface:
+  display_name: "AE Graphic JSX Creator"
+  short_description: "Genera JSX nativo desde GRAPHIC_SPEC"
+  default_prompt: "Usa $ae-graphic-jsx-creator para validar GRAPHIC_SPEC y generar un JSX de After Effects."
+policy:
+  allow_implicit_invocation: true

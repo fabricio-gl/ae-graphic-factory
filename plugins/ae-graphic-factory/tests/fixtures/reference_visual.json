@@ -1,0 +1,43 @@
+{
+  "reference_count": 1,
+  "layout": {
+    "card_position": "upper_left",
+    "card_width": 980,
+    "card_height": 560,
+    "corner_radius": 32
+  },
+  "colors": {
+    "background": "#0D1117",
+    "card": "#FAF7F1",
+    "text": "#111111",
+    "highlight": "#FFD43B"
+  },
+  "motion": {
+    "entry_direction": "left",
+    "exit_direction": "right",
+    "overshoot": false
+  },
+  "highlight_count": 1,
+  "background_blur": true,
+  "blur_amount": 28,
+  "typography": {
+    "requires_identification": true,
+    "size": 68,
+    "leading": 76,
+    "tracking": -12,
+    "alignment": "left",
+    "fallback": "ArialMT"
+  },
+  "text": {
+    "title": "Referencia editorial"
+  },
+  "assets": [
+    {
+      "id": "article_capture",
+      "role": "article_capture",
+      "source": "reference-card.png",
+      "editable": false,
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "composition": {"duration_seconds": 6, "frame_count": 180, "fps": 30, "width": 1920, "height": 1080},
+  "targets": {"after_effects": "24.x", "premiere_pro": "2024"},
+  "intent": {"purpose": "Fixture inválido", "explicit_constraints": [], "inferred_direction": "bottom entry, right exit"},
+  "assets": [],
+  "elements": [
+    {"id": "title", "label": "Layer 12", "type": "text", "geometry": {"position": [960, 420], "size": [900, 180]}, "appearance": {"color": "#FFFFFF", "opacity": 100, "text": "Título"}, "layer_order": 1}
+  ],
+  "typography": [
+    {"element": "title", "font": "Invented Font", "confidence": "unresolved", "fallback": "ArialMT", "size": 64, "leading": 72, "tracking": -10, "alignment": "center", "provider": "fallback"}
+  ],
+  "animation": [
+    {"element": "title", "property": "position", "start_frame": 0, "end_frame": 180, "start_value": [960, 620], "end_value": [960, 420], "interpolation": "bezier", "easing": {"type": "ease_out", "influence": 70, "overshoot": false}, "motion_blur": true}
+  ],
+  "essential_graphics": [],
+  "assumptions": [],
+  "provenance": {"request_text": "6 segundos. Fixture inválido", "reference_count": 0, "myfonts": {"status": "unresolved", "candidate_count": 0}}
+}
